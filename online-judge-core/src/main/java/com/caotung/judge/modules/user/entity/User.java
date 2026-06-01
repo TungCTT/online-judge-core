@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "users") // Tên bảng là số nhiều
+@Table(name = "users")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 @Builder

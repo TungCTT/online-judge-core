@@ -4,7 +4,6 @@ package com.caotung.judge.modules.contest.entity;
 import com.caotung.judge.common.entity.BaseEntity;
 import com.caotung.judge.common.enums.ContestStatus;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 

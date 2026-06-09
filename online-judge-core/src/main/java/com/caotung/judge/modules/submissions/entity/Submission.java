@@ -1,6 +1,8 @@
 package com.caotung.judge.modules.submissions.entity;
 
 import com.caotung.judge.common.entity.BaseEntity;
+import com.caotung.judge.modules.contest.entity.Contest;
+import com.caotung.judge.modules.contest.entity.Contestant;
 import com.caotung.judge.modules.problems.entity.Problem;
 import com.caotung.judge.modules.submissions.dto.SubmissionDetailDTO;
 import com.caotung.judge.modules.user.entity.User;
@@ -23,6 +25,9 @@ public class Submission extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "problem_id")
     private Problem problem;
+
+    @Column(name = "contest_id", nullable = true)
+    private String contestId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)

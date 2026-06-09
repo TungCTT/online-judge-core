@@ -15,7 +15,7 @@ import lombok.*;
 public class Contestant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "contest_id", nullable = false)
@@ -24,4 +24,7 @@ public class Contestant {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @Column(name = "position", nullable = true)
+    private Integer position;
 }
